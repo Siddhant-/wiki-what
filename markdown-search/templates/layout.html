@@ -1,0 +1,20 @@
+<!doctype html>
+<head>
+<title>R29 Docs{% if title %} - {{ title }}{% endif %}</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='github-markdown.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div id="top-search">
+    <form action="{{ url_for('search') }}" name="search">
+        <input type="text" name="query" value="{{ query }}">
+        <input type="submit" value="search">
+    </form>
+</div>
+<h1 id='mainTitle'><a href="/">R29 Docs</a>{% if title %} - {{ title }}{% endif %}</h1>
+<div>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block body %}{% endblock %}
+</div>

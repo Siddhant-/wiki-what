@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+<ul>
+{% for d in docs %}
+    <li><a href="{{ d }}">{{ d }}</a><br/></li>
+{% endfor %}
+</ul>
+{% endblock %}
