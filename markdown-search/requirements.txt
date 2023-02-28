@@ -4,6 +4,6 @@ MarkupSafe==0.23
 Werkzeug==2.2.3
 Whoosh==2.7.0
 itsdangerous==0.24
-mistune==0.7
+mistune==0.8.1
 wsgiref==0.1.2
 markdown2==2.4.0
